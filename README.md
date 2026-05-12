@@ -11,3 +11,8 @@ The goal of this project is to learn:
 - Automation
 
 This project is part of a long-term hands-on learning journey into cybersecurity and AI engineering.
+
+## Future Features
+- Threat analysis
+- Phishing detection
+- Security learning assistant
