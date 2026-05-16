@@ -1,4 +1,4 @@
-from modules.analyzer import analyze_log
+from app.modules.analyzer import analyze_log
 
 with open("logs/sample.log", "r") as file:
 
