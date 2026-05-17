@@ -1,4 +1,10 @@
-import subprocess,os
+from flask import Flask
 
-path1 = r"/home/deandsomers/SentinelAI/practise/readlogs.py"
-subprocess.run(['python3',"/home/deandsomers/SentinelAI/practise/readlogs.py"])
+app = Flask(__name__)
+
+@app.route("/")
+
+def home():
+    return "Welcome to SentinelAI"
+
+app.run()
