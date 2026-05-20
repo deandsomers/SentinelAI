@@ -1,4 +1,5 @@
 from flask import Flask,request
+from app.modules.analyzer import analyze_log
 
 app = Flask(__name__)
 
@@ -7,19 +8,12 @@ def home():
     return "Welcome to SentinelAI"
 
 @app.route('/analyze')
-def analyse():
+def analyze():
     log = request.args.get('log')
+    result = analyze_log(log)
 
-    if 'failed' in log:
-        result = 'Possible brute-force attempt'
-    elif 'virus' in log:
-        result = 'Possible malware detected'
-    else:
-        result = 'No threat detected'
-
-    return {
-        'log':log,
-        'analysis':result
+    return{
+        'analysis':result,
     }
 
 @app.route('/version')
