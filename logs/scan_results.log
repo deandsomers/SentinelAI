@@ -1,0 +1,6 @@
+{
+    "threat": "Possible brute-force attempt",
+    "severity": "medium",
+    "confidence": 68,
+    "risk_level": "amber"
+}
